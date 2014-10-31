@@ -20,10 +20,10 @@ public/assets/
 .DS_Store
 
 # Ignore application configuration
-/config/application.yml
+# /config/application.yml
 coverage/
 .rvmrc
-db/database.yml
+# db/database.yml
 public/uploads
 zeus.json
 custom_plan.rb
