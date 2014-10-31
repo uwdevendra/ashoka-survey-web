@@ -1,44 +1,57 @@
-production:
-  OAUTH_ID: # Application ID of the OAuth provider.
-  OAUTH_SECRET: # Secret of the OAuth provider.
-  OAUTH_SERVER_URL: # URL where the OAuth Provider instance is hosted.
-  S3_ACCESS_KEY: # S3 Access key.
-  S3_SECRET: # S3 Secret Key
-  S3_BUCKET: # S3 Bucket Name
-  BITLY_USERNAME: # Username of your bit.ly account
-  BITLY_API_KEY: # API key from your bit.ly account
-  MIXPANEL_TOKEN: # The access token provided by mixpanel
-  SENDGRID_CATEGORY: # The category used when sending emails
-  AIRBRAKE_TOKEN: # API token for airbrake.io
-  SECRET_TOKEN: # Secret key used to sign cookies (run `rake secret`)
-  SURVEY_BUILDER_V2: # Feature toggle for the new Survey Builder
-
 development:
-  OAUTH_ID: # Application ID of the OAuth provider.
-  OAUTH_SECRET: # Secret of the OAuth provider.
-  OAUTH_SERVER_URL: # URL where the OAuth Provider instance is hosted.
-  S3_ACCESS_KEY: # S3 Access key.
-  S3_SECRET: # S3 Secret Key
-  S3_BUCKET: # S3 Bucket Name
-  BITLY_USERNAME: # Username of your bit.ly account
-  BITLY_API_KEY: # API key from your bit.ly account
-  MIXPANEL_TOKEN: # The access token provided by mixpanel
-  SENDGRID_CATEGORY: # The category used when sending emails
-  AIRBRAKE_TOKEN: # API token for airbrake.io
-  SECRET_TOKEN: # Secret key used to sign cookies (run `rake secret`)
-  SURVEY_BUILDER_V2: # Feature toggle for the new Survey Builder
+  OAUTH_ID: 23d912fc4f5789fd851a33f6760f0f4ead932b7754c0752c07c86778592a29aa
+  OAUTH_SECRET: 1ae36494d9eef05f8de2ada8d24101bcf0485935f7e2d09eb351dd069bb80653
+  OAUTH_SERVER_URL: http://0.0.0.0:3001
+  BITLY_USERNAME: infinitisuite
+  BITLY_API_KEY: R_dd686b7c06434ef53c21f592e6e66c09
+  S3_ACCESS_KEY: AKIAIMLX5Y3O3OKHMS2A
+  S3_SECRET: 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
+  S3_BUCKET: surveywebdevelopmentassets
+  MIXPANEL_TOKEN: 981a7a6da84c67bb7faeec8db0143beb
+  SECRET_TOKEN: 9f8a26321c4baadebb9f222aed4257a86f31f36d68d2380754f4919c0bbbfceb09a0c66b2ae7eb94db1ae9f60c085cb096ad5d01287f64c73c7eaa9088036d11
+#  SURVEY_BUILDER_V2: THISISSOTRUE
+
+# 
 
 test:
-  OAUTH_ID: # Application ID of the OAuth provider.
-  OAUTH_SECRET: # Secret of the OAuth provider.
-  OAUTH_SERVER_URL: # URL where the OAuth Provider instance is hosted.
-  S3_ACCESS_KEY: # S3 Access key.
-  S3_SECRET: # S3 Secret Key
-  S3_BUCKET: # S3 Bucket Name
-  BITLY_USERNAME: # Username of your bit.ly account
-  BITLY_API_KEY: # API key from your bit.ly account
-  MIXPANEL_TOKEN: # The access token provided by mixpanel
-  SENDGRID_CATEGORY: # The category used when sending emails
-  AIRBRAKE_TOKEN: # API token for airbrake.io
-  SECRET_TOKEN: # Secret key used to sign cookies (run `rake secret`)
-  SURVEY_BUILDER_V2: # Feature toggle for the new Survey Builder
+  OAUTH_ID: foo
+  OAUTH_SECRET: bar
+  OAUTH_SERVER_URL: http://foo.bar
+  BITLY_USERNAME: infinitisuite
+  BITLY_API_KEY: foo-key
+  S3_ACCESS_KEY: s3-key
+  S3_SECRET: s3-secret
+  S3_BUCKET: s3-bucket
+  MIXPANEL_TOKEN: foo-key
+  SECRET_TOKEN: foo
+
+
+
+###############################################
+# OAuth2 Provider
+# ×
+# Application created
+
+# Application: Userworks
+
+# Callback url:
+
+# http://0.0.0.0:3000/auth/user_owner/callback
+
+# Application Id:
+
+# ae1204f6f38a70cfbd18de21460ff6bdb5fd8b35c086eb41b2b56a3f457a84d8
+
+# Secret:
+
+# b0640fe0fd04b9326a686227561ccba3d399211e784dccfe2f24c5c516a73056
+
+# Actions
+
+# Home
+
+# List all
+
+# Edit
+
+# Remove

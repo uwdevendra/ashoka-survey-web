@@ -7,7 +7,7 @@ class SurveysController < ApplicationController
   after_filter(:only => [:destroy]) { send_to_mixpanel("Survey destroyed", {:survey => @survey.name}) if @survey.present? }
   after_filter(:only => [:finalize]) { send_to_mixpanel("Survey finalized", {:survey => @survey.name}) if @survey.present? }
   after_filter(:only => [:archive]) { send_to_mixpanel("Survey archived", {:survey => @survey.name}) if @survey.present? }
-  before_filter :redirect_to_https, :only => :index
+#  before_filter :redirect_to_https, :only => :index
 
   def index
     @surveys ||= Survey.none
