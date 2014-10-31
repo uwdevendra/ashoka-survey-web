@@ -1,0 +1,5 @@
+workarounds so far 
+
+1. commented 
+"before_filter :redirect_to_https, :only => :index"
+to make it work without https on local setup
