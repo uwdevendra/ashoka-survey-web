@@ -1,3 +1,15 @@
+<surveyquestion id="{{id}}">
+<%= render "templates/dummies/finalized_icon" %>
+<a href="javascript:void(0)" class="delete_category">delete</a>
+<a href="javascript:void(0)" class="copy_question" >Copy</a>
+<a href="{{duplicate_url}}" class="copy_question_hidden" data-method="post">Copy</a>
+<div class="collapse_category">&#9660;</div>
+<div class="inline_errors">{{errors}}</div>
+<span>{{question_number}})</span>
+<label>
+  {{content}}
+</label>
+
 <div>
   <label><%= t("surveys.build.category_title") %> </label>
   <input type="text" name="content" value="{{content}}"></input>
@@ -6,7 +18,8 @@
 {{#id}}
   <div>
     <%= render 'templates/question_types_dropdown' %>
-    <button class='add_sub_question' href='#'>Add Sub-Question</button>
+    <!-- <button class='add_sub_question' href='#'>Add Sub-Question</button> -->
+    <a class='add_sub_question' href='#'>Add Sub-Question</a>
   </div>
 
   <div>

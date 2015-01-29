@@ -21,7 +21,7 @@
     [record_id, category_id] = record
     delete_record_link = """
                          <a href= '/records/#{record_id}'
-                         data-confirm='Are you sure?' class='delete_record'
+                         data-confirm='Are you sure?' class='delete_record '
                          data-method='delete' rel='nofollow'>
                          Delete Record
                          </a>

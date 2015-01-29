@@ -38,8 +38,9 @@ class SurveyBuilder.Views.SurveyBuilderView extends Backbone.View
     parent = data.parent
     model = this.survey.add_new_question_model(type, parent)
     dummy_view = this.dummy_pane.add_element(type, model, parent)
-    this.settings_pane.add_element(type, model)
-    dummy_view.show_actual()
+    # settings_view = this.settings_pane.add_element(type, model)
+    # dummy_view.show_actual()
+    # $(dummy_view.el).append(settings_view.el)
     model.save_model()
 
   new_category: (event, type) =>
@@ -49,12 +50,23 @@ class SurveyBuilder.Views.SurveyBuilderView extends Backbone.View
     this.settings_pane.add_element(type, model)
     model.save_model()
 
+  # Original Source
+  # 
+  # preload_elements: (elements) =>
+  #   _(elements).each (element) =>
+  #     model = this.survey.add_new_question_model(element.type, element)
+  #     model.set('id', element.id)
+  #     this.dummy_pane.add_element(element.type, model)
+  #     this.settings_pane.add_element(element.type, model)
+  #     model.preload_sub_elements()
+
   preload_elements: (elements) =>
     _(elements).each (element) =>
       model = this.survey.add_new_question_model(element.type, element)
       model.set('id', element.id)
-      this.dummy_pane.add_element(element.type, model)
-      this.settings_pane.add_element(element.type, model)
+      dummy_view = this.dummy_pane.add_element(element.type, model)
+      # settings_view = this.settings_pane.add_element(element.type, model)
+      # $(dummy_view.el).append(settings_view.el)
       model.preload_sub_elements()
 
   loading_overlay: =>

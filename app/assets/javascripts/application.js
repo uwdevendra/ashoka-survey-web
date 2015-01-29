@@ -35,7 +35,6 @@
 //= require backbone_rails_sync
 //= require backbone_datalink
 //= require backbone/survey_builder
-//= require backbone/survey_builder_v2/survey_builder_v2
 //= require moment
 //= require_tree .
 

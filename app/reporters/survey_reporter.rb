@@ -20,4 +20,13 @@ class SurveyReporter
     complete_counts = monthly_complete_responses_for(user_id)
     incomplete_counts.merge(complete_counts)
   end
+
+
+  def total_incomplete_responses
+    total_incomplete_responses = @survey.responses.where(:status => Response::Status::COMPLETE).count
+  end
+
+  def total_complete_responses
+    total_complete_responses = @survey.responses.where(:status => Response::Status::INCOMPLETE).count
+  end
 end

@@ -12,6 +12,8 @@ class SurveyBuilder.Views.SettingsPaneView extends Backbone.View
     model.on('destroy', this.delete_question_view, this)
     $(this.el).append($(view.render().el))
     $(view.render().el).hide()
+    $("#dummy_questions").append(view.el)
+    view
 
   add_survey_details: (survey_model) =>
     template = $(@DETAILS).html()

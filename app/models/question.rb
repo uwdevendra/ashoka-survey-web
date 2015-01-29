@@ -5,10 +5,10 @@ class Question < ActiveRecord::Base
   has_many :answers, :dependent => :destroy
 
   attr_accessible :content, :mandatory, :image, :type, :survey_id, :order_number,
-                    :parent_id, :identifier, :category_id, :private, :finalized
+                    :parent_id, :identifier, :category_id, :private, :finalized,:max_length,:min_value,:max_value
 
   validates_presence_of :content
-  validates_uniqueness_of :order_number, :scope => [:survey_id, :parent_id, :category_id], :allow_nil => true
+  # validates_uniqueness_of :order_number, :scope => [:survey_id, :parent_id, :category_id], :allow_nil => true
   validate :ensure_survey_is_draft, :if => :mandatory_changed?
   validate :allow_limited_updates_for_finalized, :if => :finalized?, :on => :update
 

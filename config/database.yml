@@ -6,7 +6,7 @@
 development:
   adapter: postgresql
   encoding: utf8
-  database: survey_web_dev_1
+  database: survey_web_dev
   pool: 5
   username: postgres
   password: devendra
@@ -18,16 +18,16 @@ development:
 test:
   adapter: postgresql
   encoding: utf8
-  database: survey_web_test_1
+  database: survey_web_test
   pool: 5
-  username:
-  password:
+  username: postgres
+  password: devendra
   host: localhost
 
 production:
   adapter: postgresql
   encoding: utf8
-  database: survey_web_prod_1
+  database: survey_web_prod
   pool: 5
   username:
   password:

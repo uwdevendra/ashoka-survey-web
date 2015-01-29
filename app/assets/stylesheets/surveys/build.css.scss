@@ -1,6 +1,6 @@
 body#build{
   div#banner{width: 100px;}
-  div#page{margin: 0 0 0 80px;}
+  /*div#page{margin: 0 0 0 80px;}*/
 
   h3#welcome{position: fixed; top: 10px; right: 20px; text-align: right; margin: 0; line-height: 20px;}
 
@@ -214,7 +214,7 @@ body#build{
         span{display: block; float: left; margin-left: -20px; font-weight: bold;}
 
         a.delete_question, a.delete_category, a.copy_question, a.copy_question_hidden {display: none;}
-        &:hover{ background: $gray-xxlight;}
+        &:hover{/* background: $gray-xxlight;*/}
 
         &.active{
           background: $secondary-color-light;
@@ -294,7 +294,7 @@ body#build{
     left: 46%;
     text-align: center;
     top: 42%;
-    color: $secondary-color;
+    color: $blue;
     font-size: 25px;
   }
 }
@@ -302,3 +302,183 @@ body#build{
 img.thumb {
   width: 100px;
 }
+
+
+/****** SURVEY BUILDER ********/
+.builder-survey-info {
+    clear: both;
+    padding: 15px 15px;
+    .builder-survey-name-info {
+        float: left;
+        width: 63%;
+        input[type="text"]{display: block; font-size: 16px; color:$black-subheader; font-weight: 500;}
+        textarea{display: block; width:100%; height:65px;}
+    }
+}
+
+.survey-builder {padding: 15px; clear: both; padding-bottom: 250px;}
+.addQuestion {clear: both; position: relative; /*margin-bottom: 250px;*/ padding: 15px 0px 0 0;}
+.add-question-btn {
+    display: inline-block;
+    border: 1px solid #e0e0e0;
+    padding: 13px;    
+    background: transparent image-url('addQuestion.svg') no-repeat left top;
+    -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+       -moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        -ms-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.question-types {
+    position: absolute;
+    border: 1px solid #e0e0e0;
+    background: $white-color;
+    width: 264px;
+    padding: 10px 15px;
+    margin: 0px 0 0 27px;
+    display: none;
+    -webkit-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+       -moz-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        -ms-box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+            box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+    ul{
+        list-style-type: none;
+        margin: 0px;
+        padding: 0px;
+        li{
+            display: block;
+            width: 122px;
+            padding: 7px 5px;
+            float: left;
+            label, input{float: left;}
+            span{margin-left: 8px; line-height: 20px;}
+
+        }
+    }
+.addBtn {border: 0px;
+    background: none;
+    outline:none;
+    &:active{
+        background: #dddddd;
+        color: $peacockGreen-color;
+    };
+        }    
+}
+.show{display: block;}
+.dummy_question {
+    clear: both;
+    position: relative;
+    margin: 0px 0 15px 0;
+    border: 1px solid #e0e0e0;
+    padding: 10px 10px 0px 10px;
+    background: $extreme-light-gray;
+    .question-container {
+        margin: -10px -10px 0px -10px;  
+        background: #eeeeee;
+        padding: 10px 15px;
+        font-weight: 500;
+        input{color: $black-subheader; font-weight: 500; margin: 0px; width:500px;}   
+        .inline_errors {font-size: 12px; color: $errorRed-color;}   
+    }
+    .children-content{
+        padding: 15px 5px;        
+    }   
+}
+.no-of-characters {}
+.add-in-bulk{
+    clear: both;
+    input[type="text"]{ margin-right: 10px;}
+}
+.option {
+    clear: both;
+    padding:10px 0 5px 0;
+    input, label {float: left; margin-right: 10px; margin-top: 3px;}
+    span.label{border-bottom: 2px solid #dedede;}
+}
+
+.icon-btns {/*padding:3px 5px;*/
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    @include border-radius(2px);
+    border:1px solid #e0e0e0;
+    background-color: $dark-gray-background;
+    margin-left: 10px;
+
+    &:active {background-color: $white-color}
+}
+.add-option {background: transparent image-url('addQuestion.svg') no-repeat left top; background-size: 20px;
+}
+.delete-option {background: transparent image-url('rubbish.svg') no-repeat left top; background-size: 20px;
+}
+
+.sub-question {margin: 20px 0;}
+.formwidget-container-editor {    
+        -webkit-box-shadow: 1px 0 10px 1px rgba(0, 0, 0, 0.3);
+           -moz-box-shadow: 1px 0 10px 1px rgba(0, 0, 0, 0.3);
+            -ms-box-shadow: 1px 0 10px 1px rgba(0, 0, 0, 0.3);
+                box-shadow: 1px 0 10px 1px rgba(0, 0, 0, 0.3);
+}
+.form-top-right-actions {
+    float: right;
+    width: 250px;
+    text-align: right;
+
+.action{
+    padding:3px 5px;
+    display: inline-block;
+    margin-left: 10px;
+    img {/*width:20px;*/ height: 20px;}
+    &:active {background: $white-color}    
+}
+
+}
+.form-actions {
+  text-align: right;
+  padding: 15px 15px 0px 15px;
+  form {margin:0px; padding: 0px;}
+}
+.form-actions input.hidden {display: none;}
+
+/*.identifier_icon{
+          display: block;
+          position: absolute;
+          top: 0; right: 54px;
+          width: 36px; height: 36px;
+          text-indent: -1000em;
+
+          &:before{
+            display: block;
+            position: absolute;
+            top: 0; right: 0;
+            font-family: "FontAwesome";
+            content: "\f02e";
+            font-size: 24px;
+            line-height: 22px;
+            text-indent: 0;
+            color: $danger;
+          }
+        }*/
+
+.identifier_icon {
+                display: block;
+                position: absolute;              
+                top: 0;
+                right: 136px;
+                width: 36px;
+                height: 36px;
+                text-indent: -1000em;
+                &:before {
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    font-family: "FontAwesome";
+                    content: "\f02e";
+                    font-size: 24px;
+                    line-height: 22px;
+                    text-indent: 0;
+                    color: $danger;
+              }
+}
+

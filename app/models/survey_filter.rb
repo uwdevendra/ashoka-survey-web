@@ -13,6 +13,8 @@ class SurveyFilter
       surveys.archived
     when "expired"
       surveys.unarchived.expired
+    when "all"
+      surveys
     else
       surveys.active
     end

@@ -4,7 +4,7 @@ class MultiChoiceQuestionDecorator < QuestionWithOptionsDecorator
 
   def input_tag(f, opts={})
     super(f,  :field => :option_ids,
-              :as => :check_boxes,
+              :as => :custom_check_boxes,
               :collection => options.map(&:id),
               :member_label => Proc.new { |id| Option.find_by_id(id).try(:content)},
               :disabled => opts[:disabled] ? options.map(&:id) : [])

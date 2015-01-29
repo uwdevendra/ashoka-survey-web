@@ -78,4 +78,7 @@ group :development do
   gem 'unicorn-rails', '~> 1.0.0'
   gem 'quiet_assets', '~> 1.0.1'
   gem 'rails-footnotes', '~> 3.7.9'
+  gem 'rails-erd'
+  gem 'railroady'
+  gem 'debugger'
 end

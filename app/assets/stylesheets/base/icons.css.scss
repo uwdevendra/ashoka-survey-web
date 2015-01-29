@@ -6,40 +6,61 @@
   font-style: normal;
 }
 
-a.delete_question, a.delete_category, a.copy_question {
+a.delete_question, a.delete_category {
   display: block;
   position: relative;
   float: right;
-  width: 16px;
-  height: 16px;
-  text-indent: -1000em;
-  overflow: hidden;
-  background: $secondary-color-dark;
-  @include border-radius(8px);
-
-  &:after{
-    color: $white;
-    content: "\f00d";
-    font-family: "FontAwesome";
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 16px;
-    height: 16px;
-    text-indent: 0;
-    text-align: center;
-    line-height: 18px;
-    font-size: 10px;
-  }
-}
-
-a.copy_question {
-  background: $secondary-color;
-  margin-right: 4px;
+  width: 22px;
+  height: 22px;  
   @include border-radius(2px);
-  &:after{
-    content: "\f0c5";
-    font-size: 14px;
-  }
+  background: transparent image-url('rubbish.svg') no-repeat center center;
+  overflow: hidden;
+  background-size: 24px;
+  margin-left: 5px;
+  padding: 5px;
+  &:hover {
+    background: #fff image-url('rubbish.svg') no-repeat center center;
+    background-size: 24px;
+}
+}
+a.copy_question {
+ display: block;
+  position: relative;
+  float: right;
+  width: 22px;
+  height: 22px;  
+  @include border-radius(2px);
+  background: transparent image-url('copy.svg') no-repeat center center;
+  overflow: hidden;
+  background-size: 19px;
+  padding: 5px;
+  margin-left: 5px; 
+  &:hover{
+    background: #fff image-url('copy.svg') no-repeat center center;
+    background-size: 19px;
+  }; 
+}
+a.setting {
+  display: block;
+  position: relative;
+  float: right;
+  width: 22px;
+  height: 22px;  
+  @include border-radius(2px);
+  background: transparent image-url('settings.svg') no-repeat center center;
+  overflow: hidden;
+  background-size: 24px;
+  margin-left: 5px;
+  padding: 5px;
+
+  &:hover{
+    background: #fff image-url('settings.svg') no-repeat center center;
+    background-size: 24px;
+  }; 
+
+  &:active{
+    background: #fff;
+    @include border-radius(2px);
+  }; 
+ 
 }

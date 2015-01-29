@@ -1,11 +1,9 @@
 @import "base/core";
 
+@import "questions";
 @import "layout";
 @import "components";
 @import "banner";
-
-@import "surveys/v2/build/build";
-@import "surveys/v2/build/questions";
 
 @import "surveys/index.css.scss";
 @import "surveys/build.css.scss";
@@ -17,6 +15,8 @@
 
 @import "organizations_dashboard";
 @import "responses_dashboard";
+@import "pages";
+
 
 @import "public_link_dialog";
 @import "excel_password_dialog";

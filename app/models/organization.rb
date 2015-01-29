@@ -1,11 +1,12 @@
 class Organization
-  attr_reader :id, :name, :logo_url
+  attr_reader :id, :name, :logo_url , :about
   include Draper::Decoratable
 
   def initialize(id, attributes={})
     @id = id
     @name = attributes[:name]
     @logo_url = attributes[:logo_url]
+    @about = attributes[:about]
   end
 
   def self.all(access_token, options={})
@@ -52,6 +53,8 @@ class Organization
 
   def self.json_to_organization(org_json)
     logo_url = org_json['logos']['thumb_url'] if org_json['logos']
-    Organization.new(org_json['id'], :name => org_json['name'], :logo_url => logo_url)
+    about = org_json['about'] if org_json['about']
+    # puts Organization.new(org_json['id'], :name => org_json['name'], :logo_url => logo_url, :about => org_json['about']).inspect
+    Organization.new(org_json['id'], :name => org_json['name'], :logo_url => logo_url, :about => about)
   end
 end

@@ -1,7 +1,7 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
   before_filter :set_locale, :session_token
-  helper_method :current_user_info, :register_path, :new_user_path, :current_ability
+  helper_method :current_user_info, :register_path, :new_user_path, :current_ability , :current_user_org_path , :all_user_path
 
   def default_url_options(options={})
     return { :locale => I18n.locale } unless I18n.locale == I18n.default_locale
@@ -86,6 +86,14 @@ class ApplicationController < ActionController::Base
 
   def new_user_path
     "#{ENV['OAUTH_SERVER_URL']}/organizations/#{current_user_org}/users/new"
+  end
+
+  def all_user_path
+    "#{ENV['OAUTH_SERVER_URL']}/organizations/#{current_user_org}/users"
+  end
+
+  def current_user_org_path
+    "#{ENV['OAUTH_SERVER_URL']}/organizations/#{current_user_org}"
   end
 
   def send_to_mixpanel(event_name, attributes = {})

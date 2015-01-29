@@ -4,7 +4,7 @@ class Survey < ActiveRecord::Base
   validates :expiry_date, :date => { :after => Proc.new { Date.current }}, :if => :expiry_date_changed?
   validates_presence_of :expiry_date
   validate :ensure_survey_to_be_archivable
-  validates :description, :length => { :maximum => 250 }
+  validates :description, :length => { :maximum => 1024 }
 
   has_many :questions, :dependent => :destroy
   has_many :categories, :dependent => :destroy
@@ -155,6 +155,15 @@ class Survey < ActiveRecord::Base
   def incomplete_responses_count(current_ability)
     responses.accessible_by(current_ability).where(:status => 'incomplete', :blank => false).count
   end
+
+  def responses_count(current_ability)
+    responses.accessible_by(current_ability).count
+  end
+
+  # def assinged_user_count(access_token)
+  #   # self.survey_users.count
+  #   User.users_for_ids(access_token, self.ids_for_users_with_responses).count
+  # end
 
   def publicize
     self.public = true

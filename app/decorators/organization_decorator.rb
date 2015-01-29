@@ -31,6 +31,14 @@ class OrganizationDecorator < Draper::Decorator
     Organization.users(context[:access_token], model.id).count
   end
 
+  def organization_logo_url
+    Organization.find_by_id(context[:access_token],model.id).logo_url
+  end
+
+  def organization_about
+    Organization.find_by_id(context[:access_token],model.id).about
+  end
+
   def user_count_in_words
     h.pluralize(user_count, "User")
   end
